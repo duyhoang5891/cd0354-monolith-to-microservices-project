@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverse-proxy:
+    build:
+      context: ../udagram-reverse-proxy
+    image: duyhoang5891/reverse-proxy
+  udagram-backend-user:
+    build:
+      context: ../udagram-backend-user
+    image: duyhoang5891/udagram-backend-user
+  udagram-backend-feed:
+    build:
+      context: ../udagram-backend-feed
+    image: duyhoang5891/udagram-backend-feed
+  udagram-frontend:
+    build:
+      context: ../udagram-frontend
+    image: duyhoang5891/udagram-frontend
