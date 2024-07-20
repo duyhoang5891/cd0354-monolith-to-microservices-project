@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t $DOCKER_USERNAME/reverseproxy ./udagram-reverseproxy # build reverse proxy
+  - docker build -t $DOCKER_USERNAME/reverseproxy ./udagram-reverse-proxy # build reverse proxy
   - docker build -t $DOCKER_USERNAME/udagram-api-user ./udagram-backend-user        # build user api
   - docker build -t $DOCKER_USERNAME/udagram-api-feed ./udagram-backend-feed         # build feed api
   - docker build -t $DOCKER_USERNAME/udagram-frontend ./udagram-frontend         # build frontend
