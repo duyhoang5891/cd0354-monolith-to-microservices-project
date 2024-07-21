@@ -5,7 +5,7 @@ metadata:
     app: udagram-api-feed
   name: udagram-api-feed
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: udagram-api-feed
@@ -20,7 +20,7 @@ spec:
           secret:
             secretName: aws-secret
       containers:
-      - image: duhoang5891/udagram-api-feed
+      - image: duyhoang5891/udagram-api-feed
         name: udagram-api-feed
         resources:
           requests:
