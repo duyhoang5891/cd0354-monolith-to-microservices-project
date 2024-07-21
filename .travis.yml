@@ -15,15 +15,15 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t $DOCKER_USERNAME/reverseproxy ./udagram-reverse-proxy # build reverse proxy
-  - docker build -t $DOCKER_USERNAME/udagram-api-user ./udagram-backend-user        # build user api
-  - docker build -t $DOCKER_USERNAME/udagram-api-feed ./udagram-backend-feed         # build feed api
+  - docker build -t $DOCKER_USERNAME/udagram-reverse-proxy ./udagram-reverse-proxy # build reverse proxy
+  - docker build -t $DOCKER_USERNAME/udagram-api-user ./udagram-api-user        # build user api
+  - docker build -t $DOCKER_USERNAME/udagram-api-feed ./udagram-api-feed         # build feed api
   - docker build -t $DOCKER_USERNAME/udagram-frontend ./udagram-frontend         # build frontend
   - docker images   # check build result
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push $DOCKER_USERNAME/reverseproxy #push reverse proxy
+  - docker push $DOCKER_USERNAME/udagram-reverse-proxy #push reverse proxy
   - docker push $DOCKER_USERNAME/udagram-api-user     #push user api
   - docker push $DOCKER_USERNAME/udagram-api-feed     #push feed api
   - docker push $DOCKER_USERNAME/udagram-frontend     #push frontend
