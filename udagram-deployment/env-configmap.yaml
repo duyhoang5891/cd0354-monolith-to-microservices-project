@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: env-variable
+  name: env-config
 data:
   # property-like keys; each key maps to a simple value
   POSTGRES_DB: postgres
@@ -10,4 +10,4 @@ data:
   AWS_REGION: us-west-2
   AWS_PROFILE: default
   JWT_SECRET: mytoken
-  URL: http://localhost:8100
+  URL: http://aaa144eef364f4968a4f6fe1caa09fec-1329803638.us-west-2.elb.amazonaws.com
