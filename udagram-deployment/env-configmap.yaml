@@ -5,9 +5,9 @@ metadata:
 data:
   # property-like keys; each key maps to a simple value
   POSTGRES_DB: postgres
-  POSTGRES_HOST: postgres.c9vfxxrzekx4.us-west-2.rds.amazonaws.com
-  AWS_BUCKET: hoangpd7-992037258453-dev
+  POSTGRES_HOST: postgres.c3zremg46nuu.us-west-2.rds.amazonaws.com
+  AWS_BUCKET: pr3-577558010798-dev
   AWS_REGION: us-west-2
   AWS_PROFILE: default
   JWT_SECRET: mytoken
-  URL: http://aaa144eef364f4968a4f6fe1caa09fec-1329803638.us-west-2.elb.amazonaws.com
+  URL: http://a10b402dccd3647d6866f36c5a648a04-560832268.us-west-2.elb.amazonaws.com
